@@ -1,7 +1,13 @@
 # clink
+*Any fool can write code that a computer can understand. Good programmers write code that humans can understand.* - **Martin Fowler**
+
+[![Python - 3.13.7](https://img.shields.io/badge/Python-3.13.7-315C91?style=for-the-badge)](https://www.python.org/downloads/)
+[![License - MIT](https://img.shields.io/badge/License-MIT-D1682C?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
+![Open Source](https://img.shields.io/badge/Open_Source-23A15C?style=for-the-badge)
+
 
 ### Overview
-This project is a bloat-free graphical user interface for building command-line applications. 
+This project is a powerful graphical user interface for building command-line applications. 
 It allows anyone to design, configure, and export fully functional CLI tools without needing to manually write boilerplate code. 
 The generated applications are lightweight, portable, and customizable to fit a wide variety of use cases.
 
@@ -39,14 +45,26 @@ Build > Configuration > Install Build dependencies
 clink will then run a installation script that installs every dependency it needs to be able to build all features into real code using pip.
 
 ### Getting started
-
-### Usage
+Once you have started the clink studio application, you can now create now projects.
+```
+File > New > Project
+```
+You should now see a window that allows you to give your project a name and some other settings. Set these as you prefer and click **Go**.
+<br> Now you're all set and can start developing.
 
 ### Demo
+The first program, every developer has written in their career is a "Hello, World!" program, and thats what we're gonna do as a demo as well.
+The picture below will show you the action block needed to execute such a program.
+<br>
+*Picture coming soon!*
 
 ### Documentation
+See [docs.md](./docs/docs.md) for a detailed feature explanation and some tutorials.
 
 ### Releases & Changelogs
+See [changelog.txt](./docs/changelog.txt) page for Changelogs.
+Reading the changelogs is a good way to keep up to date with the things clink has to offer, 
+and maybe will give you ideas of some features that you've been ignoring until now!
 
 ### Cross-Platform Support
 Even though I will probably add full cross-platform support in the future, clink is mainly developed for windows 
