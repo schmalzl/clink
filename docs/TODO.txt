@@ -1,0 +1,10 @@
+- Disable maximizing viewport completly or track fullscreen to resize internal windows
+- Set Actions menu to always primary or disable header bars
+- Change line distance in console (should be narrower together)
+    --> Change UI Style
+        --> Apply narrow styles to windows and only narrower text styles to viewport menu bar as a go around to resizing.
+- important: make the console update everytime a new item gets appended
+    - deps installer: print result.stdout to internal console instead of terminal
+- cleanup: comment everything better & restructure project for more clarity
+- add changes to github
+- get the current project display to work
