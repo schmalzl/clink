@@ -7,6 +7,10 @@
 ![Open Source](https://img.shields.io/badge/Open_Source-23A15C?style=for-the-badge)
 
 
+|[Overview](#overview) - [How it works](#how-it-works) - [Installation](#installation) - [Getting Started](#getting-started) - [Demo](#demo)|
+:----------------------------------------------------------: |
+|[Documentation](#documentation) - [Releases & Changelogs](#releases--changelogs) - [Cross-Platform Support](#cross-platform-support) - [Gallery](#gallery) - [Support & FAQ](#support--faq) - [Credits](#credits) - [License](#license)|
+
 ### Overview
 This project is a powerful graphical user interface for building command-line applications. 
 It allows anyone to design, configure, and export fully functional CLI tools without needing to manually write boilerplate code. 
