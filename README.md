@@ -6,7 +6,7 @@
 [![License - MIT](https://img.shields.io/badge/License-MIT-D1682C?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 ![Open Source](https://img.shields.io/badge/Open_Source-23A15C?style=for-the-badge)
 
-<sub> This project is actively developed and support from the community is much appreciated. You can share your recommendations, issues and ideas in GitHub's Issue Tab. You can also check me out on YouTube, where I share the journey of clink.</sub>
+<sub> This project is actively developed and support from the community is much appreciated. You can share your recommendations, issues and ideas in GitHub's Issue Tab.<br>You can also check me out on YouTube, where I share the journey of clink.</sub>
 
 |[Overview](#overview) - [How it works](#how-it-works) - [Installation](#installation) - [Getting Started](#getting-started) - [Demo](#demo)|
 :----------------------------------------------------------: |
