@@ -7,6 +7,7 @@ import dearpygui.dearpygui as dpg # type: ignore
 import dearpygui # type: ignore
 from src.gui import display_gui
 from src.console import add_to_console
+import src.gui_ids as id
 
 
 # check the current system environment
@@ -35,8 +36,14 @@ with dpg.theme() as global_theme:
        dpg.add_theme_style(dpg.mvStyleVar_FramePadding, 2, 3)
        dpg.add_theme_style(dpg.mvStyleVar_ItemSpacing, 8, 1)
 
+with dpg.theme() as console_theme:
+    with dpg.theme_component(dpg.mvAll):
+        dpg.add_theme_style(dpg.mvStyleVar_ItemSpacing, 5, 0)
+        dpg.add_theme_style(dpg.mvStyleVar_FramePadding, 2, 0)
+
 # apply styles
 dpg.bind_theme(global_theme)
+dpg.bind_item_theme(id._console_win, console_theme)
 
 # set title
 app_title = "clink studio 0.1.dev <" + render_api + ">"
