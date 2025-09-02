@@ -1,10 +1,17 @@
-- Disable maximizing viewport completly or track fullscreen to resize internal windows
-- Set Actions menu to always primary or disable header bars
-- Change line distance in console (should be narrower together)
-    --> Change UI Style
-        --> Apply narrow styles to windows and only narrower text styles to viewport menu bar as a go around to resizing.
-- important: make the console update everytime a new item gets appended
-    - deps installer: print result.stdout to internal console instead of terminal
+clink
+ISSUES & TODO LIST
+
+### THIS LIST IS NOT WELL MAINTAINED AND MAY BE OUT OF DATE ###
+TODO.txt is basically just a place for my personal notes.
+Feel free to open up a new issue on GitHub if you have any questions.
+
+- console: change ui styling of imgui. Lines should be closer together.
+- console: make the console update everytime a new item gets appended
+- console: make the stdout from the dependency installer write the output to the internal console
+
+- viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
+- viewport: get the current project display to work (menu bar)
+
+- style: change ui colors to a darker theme and disable different colors for top bars of windows.
+
 - cleanup: comment everything better & restructure project for more clarity
-- add changes to github
-- get the current project display to work
