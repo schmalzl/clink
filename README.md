@@ -41,14 +41,14 @@ Now, you will need to install Python. You can either get it using the Microsoft 
 
 You are almost ready to go. The only thing left is installing the build dependencies for clink. To do so, open clink studio and install the dependencies.
 ```
-Build > Configuration > Install Build dependencies
+Build > Update build dependencies
 ```
 clink will then run a installation script that installs every dependency it needs to be able to build all features into real code using pip.
 
 ### Getting started
 Once you have started the clink studio application, you can now create now projects.
 ```
-File > New > Project
+File > New Project
 ```
 You should now see a window that allows you to give your project a name and some other settings. Set these as you prefer and click **Go**.
 <br> Now you're all set and can start developing.
