@@ -5,13 +5,10 @@ ISSUES & TODO LIST
 TODO.txt is basically just a place for my personal notes.
 Feel free to open up a new issue on GitHub if you have any questions.
 
-- console: change ui styling of imgui. Lines should be closer together.
 - console: make the console update everytime a new item gets appended
 - console: make the stdout from the dependency installer write the output to the internal console
 
 - viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
 - viewport: get the current project display to work (menu bar)
-
-- style: change ui colors to a darker theme and disable different colors for top bars of windows.
 
 - cleanup: comment everything better & restructure project for more clarity
