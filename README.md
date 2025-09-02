@@ -13,7 +13,7 @@
 |[Documentation](#documentation) - [Releases & Changelogs](#releases--changelogs) - [Cross-Platform Support](#cross-platform-support) - [Gallery](#gallery) - [Support & FAQ](#support--faq) - [Credits](#credits) - [License](#license)|
 
 ### Overview
-This project is a powerful graphical user interface for building command-line applications. 
+clink is a powerful graphical user interface for building command-line applications. 
 It allows anyone to design, configure, and export fully functional CLI tools without needing to manually write boilerplate code. 
 The generated applications are lightweight, portable, and customizable to fit a wide variety of use cases.
 
