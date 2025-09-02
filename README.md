@@ -2,6 +2,8 @@
 *Any fool can write code that a computer can understand. Good programmers write code that humans can understand.* 
 <br> - **Martin Fowler**
 
+----
+
 [![Python - 3.13.7](https://img.shields.io/badge/Python-3.13.7-315C91?style=for-the-badge)](https://www.python.org/downloads/)
 [![License - MIT](https://img.shields.io/badge/License-MIT-D1682C?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 ![Open Source](https://img.shields.io/badge/Open_Source-23A15C?style=for-the-badge)
