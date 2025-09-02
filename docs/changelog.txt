@@ -1,0 +1,11 @@
+-----------------------------------------
+CLINK CHANGELOG
+-----------------------------------------
+
+-- VERSION 0.1.dev --
+add:        detailed readme.md file for github.
+add:        viewport icon (will be changed in the future).
+add:        basic gui structure.
+add:        basic internal terminal.
+add:        Ability to install build dependencies.
+updated:    README.md : Corrected spelling mistakes & out of date information.
