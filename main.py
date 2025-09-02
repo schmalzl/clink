@@ -35,11 +35,15 @@ with dpg.theme() as global_theme:
        dpg.add_theme_style(dpg.mvStyleVar_WindowPadding, 5, 5)
        dpg.add_theme_style(dpg.mvStyleVar_FramePadding, 2, 3)
        dpg.add_theme_style(dpg.mvStyleVar_ItemSpacing, 8, 1)
+       dpg.add_theme_color(dpg.mvThemeCol_WindowBg, (27, 27, 27))
+       dpg.add_theme_color(dpg.mvThemeCol_TitleBg, (40, 40, 40))
+       dpg.add_theme_color(dpg.mvThemeCol_TitleBgActive, (40, 40, 40))
 
 with dpg.theme() as console_theme:
     with dpg.theme_component(dpg.mvAll):
         dpg.add_theme_style(dpg.mvStyleVar_ItemSpacing, 5, 0)
         dpg.add_theme_style(dpg.mvStyleVar_FramePadding, 2, 0)
+
 
 # apply styles
 dpg.bind_theme(global_theme)

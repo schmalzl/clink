@@ -40,6 +40,7 @@ def display_gui():
         dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_print")
         dpg.add_text("-- INPUT --")
     
+    dpg.show_style_editor()
     with dpg.window(label="Console", width=790, height=200, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600)) as id._console_win:
         dpg.add_text("Example Text")
         dpg.add_text("Hello World")
@@ -50,6 +51,4 @@ def display_gui():
     
     with dpg.window(label="Project", width=790, height=582, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
         pass
-
-    dpg.show_style_editor()
     
