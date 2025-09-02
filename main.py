@@ -6,7 +6,7 @@ import platform # environment checks
 import dearpygui.dearpygui as dpg # type: ignore
 import dearpygui # type: ignore
 from src.gui import display_gui
-from src.console import add_to_console
+from src.gui import add_to_console
 import src.gui_ids as id
 
 
@@ -20,10 +20,11 @@ elif current_platform == "Darwin" or current_platform == "Linux":
 
 dpg.create_context()
 
+
 # load gui
 display_gui()
 
-# add startup message to console buffer
+# add startup message to console
 add_to_console("clink studio v0.1.dev - https://github.com/schmalzl/clink")
 add_to_console("(c) 2025 Kian Schmalzl")
 

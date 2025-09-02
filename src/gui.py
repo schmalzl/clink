@@ -1,6 +1,5 @@
 import dearpygui.dearpygui as dpg # type: ignore
 from src.add import add_to_actionlist
-import src.console as console
 import src.menu_callbacks as cb
 import src.gui_ids as id
 
@@ -41,14 +40,13 @@ def display_gui():
         dpg.add_text("-- INPUT --")
     
     dpg.show_style_editor()
-    with dpg.window(label="Console", width=790, height=200, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600)) as id._console_win:
-        dpg.add_text("Example Text")
-        dpg.add_text("Hello World")
-        dpg.add_text("yooooo")
-        
-        for elements in console.CONSOLE_BUFFER:
-            dpg.add_text(elements, color=(255, 255, 255, 200))
+    with dpg.window(label="Console", width=790, height=200, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console") as id._console_win:        
+        pass
     
     with dpg.window(label="Project", width=790, height=582, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
         pass
+
+# Add text to the console
+def add_to_console(message):
+    dpg.add_text(message, parent="console")
     
