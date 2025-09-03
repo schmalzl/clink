@@ -1,11 +1,18 @@
-import dearpygui.dearpygui as dpg # type: ignore
-from src.add import add_to_actionlist
-import src.menu_callbacks as cb
-import src.gui_ids as id
+# clink, v0.1.dev WIP
+# (gui code and console handler)
 
+# dear pygui framework
+import dearpygui.dearpygui as dpg # type: ignore
+
+from src.add import add_to_actionlist
+import src.menu_callbacks as cb     # menu callbacks for viewport menu bar
+import src.gui_ids as id            # shared module
+
+# Console log buffer
 CONSOLE_BUFFER = []
 
 def load_gui():
+    # viewport menu bar
     with dpg.viewport_menu_bar():
         with dpg.menu(label="File"):
             dpg.add_menu_item(label="New Project")
@@ -36,18 +43,42 @@ def load_gui():
         dpg.add_separator()
         dpg.add_text("Current Project: none")
 
-    with dpg.window(label="Actions", width=210, height=742, no_close=True, no_resize=True, no_move=True, no_collapse=True):
+    # actions menu
+    with dpg.window(label="Actions"
+                    , width=210
+                    , height=742
+                    , no_close=True
+                    , no_resize=True
+                    , no_move=True
+                    , no_collapse=True):
         dpg.add_text("-- OUTPUT --")
         dpg.add_text("Print Text to console")
         dpg.add_same_line()
         dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_print")
         dpg.add_text("-- INPUT --")
     
-    dpg.show_style_editor()
-    with dpg.window(label="Console Log", width=790, height=161, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console", horizontal_scrollbar=True) as id._console_win:        
+    # console window
+    with dpg.window(label="Console Log"
+                    , width=790
+                    , height=161
+                    , no_close=True
+                    , no_resize=True
+                    , no_move=True
+                    , no_collapse=True
+                    , pos=(210, 600)
+                    , tag="console"
+                    , horizontal_scrollbar=True) as id._console_win:        
         pass
     
-    with dpg.window(label="Project", width=790, height=581, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
+    # project viewer
+    with dpg.window(label="Project"
+                    , width=790
+                    , height=581
+                    , no_close=True
+                    , no_resize=True
+                    , no_move=True
+                    , no_collapse=True
+                    , pos=(210, 0)):
         pass
 
 # Add text to the console
