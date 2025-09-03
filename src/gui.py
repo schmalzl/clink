@@ -44,7 +44,7 @@ def load_gui():
         dpg.add_text("-- INPUT --")
     
     dpg.show_style_editor()
-    with dpg.window(label="Console", width=790, height=161, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console") as id._console_win:        
+    with dpg.window(label="Console Log", width=790, height=161, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console", horizontal_scrollbar=True) as id._console_win:        
         pass
     
     with dpg.window(label="Project", width=790, height=581, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
@@ -56,16 +56,16 @@ def add_to_console():
     for message in CONSOLE_BUFFER:
         if message.startswith("ok_"):
             message = message.removeprefix("ok_")
-            dpg.add_text("[   OK   ] " + message, parent="console")
+            dpg.add_text("[  OK  ] " + message, parent="console")
         elif message.startswith("status_"):
             message = message.removeprefix("status_")
-            dpg.add_text("[ STATUS ] " + message, parent="console")
+            dpg.add_text(":: " + message, parent="console")
         elif message.startswith("error_"):
             message = message.removeprefix("error_")
-            dpg.add_text("[ FAILED ] " + message, parent="console")
+            dpg.add_text("[FAILED] " + message, parent="console")
         elif message.startswith("note_"):
             message = message.removeprefix("note_")
-            dpg.add_text("[  NOTE  ] " + message, parent="console")
+            dpg.add_text("[ NOTE ] " + message, parent="console")
         else:
             # buffertext in gray with no string prefix for specification (terminal stdout)
             dpg.add_text(message, parent="console", color=(255, 255, 255, 180))

@@ -5,11 +5,13 @@ ISSUES & TODO LIST
 TODO.txt is basically just a place for my personal notes.
 Feel free to open up a new issue on GitHub if you have any questions.
 
-- dependency installer: add a note for new users to have patience
+- system: make a simple and easy to scale base on how to add elements to the project
 
 - viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
 - viewport: get the current project display to work (menu bar)
 
-- cleanup: dependency installer: rewrite and restructure code
+- actionbar: add some starter elements and connect them with a separate script.
+- actionbar: separate different kinds of actions / controls into different sections for ease of use.
+
 - cleanup: gui.py (add commenting for easier access and understading)
 - cleanup: gui_ids.py and add.py (commenting for easier access and understading)

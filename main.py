@@ -1,4 +1,4 @@
-# clink v0.1.dev WIP - https://github.com/schmalzl/clink
+# clink, v0.1.dev WIP - https://github.com/schmalzl/clink
 # Copyright (c) 2025 Kian Schmalzl
 # (program main entry point)
 

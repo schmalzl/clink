@@ -1,2 +1,4 @@
 matlab
 numpy
+pyDLO
+pydoodle
