@@ -5,8 +5,6 @@ ISSUES & TODO LIST
 TODO.txt is basically just a place for my personal notes.
 Feel free to open up a new issue on GitHub if you have any questions.
 
-- console: make the stdout from the dependency installer write the output to the internal console
-
 - viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
 - viewport: get the current project display to work (menu bar)
 
