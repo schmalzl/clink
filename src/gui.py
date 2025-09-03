@@ -25,6 +25,8 @@ def load_gui():
             dpg.add_separator()
             dpg.add_menu_item(label="Build Debug")
             dpg.add_menu_item(label="Build Release")
+        with dpg.menu(label="Terminal"):
+            dpg.add_menu_item(label="Clear Termianl", callback=cb.callback_clearConsole)
         with dpg.menu(label="Help"):
             dpg.add_menu_item(label="Support & Help")
             dpg.add_separator()

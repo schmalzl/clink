@@ -7,7 +7,6 @@ Feel free to open up a new issue on GitHub if you have any questions.
 
 - dependency installer: add a note for new users to have patience
 
-- console: add a clear console button
 - console: write different kinds of output in either gray or white (check directly in gui.py)
 
 - viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
