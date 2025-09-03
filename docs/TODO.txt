@@ -13,3 +13,5 @@ Feel free to open up a new issue on GitHub if you have any questions.
 - viewport: get the current project display to work (menu bar)
 
 - cleanup: dependency installer: rewrite and restructure code
+- cleanup: gui.py (add commenting for easier access and understading)
+- cleanup: gui_ids.py and add.py (commenting for easier access and understading)
