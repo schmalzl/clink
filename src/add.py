@@ -1,3 +1,6 @@
+# clink, v0.1.dev WIP
+# (action-menu callback)
+
 import dearpygui as dpg # type: ignore
 import src.gui as gui
 
