@@ -12,5 +12,5 @@ def install_build_dependencies():
 
     for i in deps_array_raw:
         result = subprocess.run(["pip", "install", i], capture_output=True, text=True)
-        # print to terminal (for now)
+        # print to console
         print(result.stdout)

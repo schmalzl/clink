@@ -3,6 +3,8 @@ from src.add import add_to_actionlist
 import src.menu_callbacks as cb
 import src.gui_ids as id
 
+CONSOLE_BUFFER = []
+
 def display_gui():
     with dpg.viewport_menu_bar():
         with dpg.menu(label="File"):
@@ -43,10 +45,12 @@ def display_gui():
     with dpg.window(label="Console", width=790, height=200, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console") as id._console_win:        
         pass
     
-    with dpg.window(label="Project", width=790, height=582, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
+    with dpg.window(label="Project", width=790, height=581, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
         pass
 
 # Add text to the console
-def add_to_console(message):
-    dpg.add_text(message, parent="console")
+def add_to_console():
+    dpg.delete_item("console", children_only=True)
+    for message in CONSOLE_BUFFER:
+        dpg.add_text(message, parent="console")
     
