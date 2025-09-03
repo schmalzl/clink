@@ -54,5 +54,19 @@ def load_gui():
 def add_to_console():
     dpg.delete_item("console", children_only=True)
     for message in CONSOLE_BUFFER:
-        dpg.add_text(message, parent="console")
+        if message.startswith("ok_"):
+            message = message.removeprefix("ok_")
+            dpg.add_text("[   OK   ] " + message, parent="console")
+        elif message.startswith("status_"):
+            message = message.removeprefix("status_")
+            dpg.add_text("[ STATUS ] " + message, parent="console")
+        elif message.startswith("error_"):
+            message = message.removeprefix("error_")
+            dpg.add_text("[ FAILED ] " + message, parent="console")
+        elif message.startswith("note_"):
+            message = message.removeprefix("note_")
+            dpg.add_text("[  NOTE  ] " + message, parent="console")
+        else:
+            # buffertext in gray with no string prefix for specification (terminal stdout)
+            dpg.add_text(message, parent="console", color=(255, 255, 255, 180))
     
