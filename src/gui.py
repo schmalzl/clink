@@ -7,6 +7,7 @@ import dearpygui.dearpygui as dpg # type: ignore
 from src.add import add_to_actionlist
 import src.menu_callbacks as cb     # menu callbacks for viewport menu bar
 import src.gui_ids as id            # shared module
+import src.shared as var            # shared global variables 
 
 # Console log buffer
 CONSOLE_BUFFER = []
@@ -41,7 +42,7 @@ def load_gui():
             dpg.add_menu_item(label="View License")
             dpg.add_menu_item(label="About")
         dpg.add_separator()
-        dpg.add_text("Current Project: none")
+        dpg.add_text(var.APP_CURRENT_PROJECT, color=(255, 255, 255, 180))
 
     # actions menu
     with dpg.window(label="Actions"
