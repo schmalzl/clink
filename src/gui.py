@@ -5,7 +5,7 @@ import src.gui_ids as id
 
 CONSOLE_BUFFER = []
 
-def display_gui():
+def load_gui():
     with dpg.viewport_menu_bar():
         with dpg.menu(label="File"):
             dpg.add_menu_item(label="New Project")
