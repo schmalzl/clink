@@ -34,7 +34,7 @@ def display_gui():
         dpg.add_separator()
         dpg.add_text("Current Project: none")
 
-    with dpg.window(label="Actions", width=210, height=782, no_close=True, no_resize=True, no_move=True, no_collapse=True):
+    with dpg.window(label="Actions", width=210, height=742, no_close=True, no_resize=True, no_move=True, no_collapse=True):
         dpg.add_text("-- OUTPUT --")
         dpg.add_text("Print Text to console")
         dpg.add_same_line()
@@ -42,7 +42,7 @@ def display_gui():
         dpg.add_text("-- INPUT --")
     
     dpg.show_style_editor()
-    with dpg.window(label="Console", width=790, height=200, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console") as id._console_win:        
+    with dpg.window(label="Console", width=790, height=161, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 600), tag="console") as id._console_win:        
         pass
     
     with dpg.window(label="Project", width=790, height=581, no_close=True, no_resize=True, no_move=True, no_collapse=True, pos=(210, 0)):
