@@ -19,6 +19,7 @@ from src.gui import add_to_console
 import src.gui as gui
 # shared package for specific container theme (console)
 import src.gui_ids as id
+import src.shared as sh
 
 def run():
     # check current system environment (Windows, Mac, Linux)
@@ -81,6 +82,12 @@ def run():
         # console update every frame until loop closed
         add_to_console()
         gui.update_values()
+
+        # check if a project is currently loaded and set is_project_active=True to allow editing
+        if sh.APP_CURRENT_PROJECT != "No open project.":
+            sh.APP_ALLOW_EDITING = True
+        else:
+            sh.APP_ALLOW_EDITING = False
     
     # --- program will stop here until the window is closed ---
     # POST COMMAND EXECUTIONS
