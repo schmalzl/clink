@@ -7,7 +7,8 @@ import dearpygui.dearpygui as dpg # type: ignore
 from src.add import add_to_actionlist
 import src.menu_callbacks as cb     # menu callbacks for viewport menu bar
 import src.gui_ids as id            # shared module
-import src.shared as var            # shared global variables 
+import src.shared as var            # shared global variables
+from src.new import create_new_project
 
 # Console log buffer
 CONSOLE_BUFFER = []
@@ -16,7 +17,7 @@ def load_gui():
     # viewport menu bar
     with dpg.viewport_menu_bar():
         with dpg.menu(label="File"):
-            dpg.add_menu_item(label="New Project")
+            dpg.add_menu_item(label="New Project", callback=new_project_ui)
             dpg.add_menu_item(label="Open Project File")
             dpg.add_separator()
             dpg.add_menu_item(label="Import new Feature")
@@ -101,4 +102,11 @@ def add_to_console():
         else:
             # buffertext in gray with no string prefix for specification (terminal stdout)
             dpg.add_text(message, parent="console", color=(255, 255, 255, 180))
+
+
+def new_project_ui():
+    with dpg.window(label="Actions"):
+        project_name = None
+        project_location = None
+        dpg.add_input_text(label="Project Name", user_data=project_name)
     
