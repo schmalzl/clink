@@ -8,6 +8,7 @@ Feel free to open up a new issue on GitHub if you have any questions.
 - system: make a simple and easy to scale base on how to add elements to the project
 
 - viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
+- viewport: add a close dialog window to prevent people from accidentally closing the viewport without saving.
 
 - actionbar: add some starter elements and connect them with a separate script.
 - actionbar: separate different kinds of actions / controls into different sections for ease of use.
