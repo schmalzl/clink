@@ -13,6 +13,9 @@ from src.new import create_new_project
 # Console log buffer
 CONSOLE_BUFFER = []
 
+# global text ids
+id_projectName = None
+
 def load_gui():
     # viewport menu bar
     with dpg.viewport_menu_bar():
@@ -42,7 +45,8 @@ def load_gui():
             dpg.add_menu_item(label="View License")
             dpg.add_menu_item(label="About")
         dpg.add_separator()
-        dpg.add_text(var.APP_CURRENT_PROJECT, color=(255, 255, 255, 180))
+        global id_projectName
+        id_projectName = dpg.add_text(var.APP_CURRENT_PROJECT, color=(255, 255, 255, 180))
 
     # actions menu
     with dpg.window(label="Actions"
@@ -103,7 +107,11 @@ def add_to_console():
             dpg.add_text(message, parent="console", color=(255, 255, 255, 180))
 
 
+# Value updater
+def update_values():
+    dpg.set_value(id_projectName, f"{var.APP_CURRENT_PROJECT}")
 
+# ----------------------------------------- NEW PROJECT DIALOG
 project_name = ""
 project_location = ""
 

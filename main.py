@@ -80,6 +80,7 @@ def run():
         dpg.render_dearpygui_frame()
         # console update every frame until loop closed
         add_to_console()
+        gui.update_values()
     
     # --- program will stop here until the window is closed ---
     # POST COMMAND EXECUTIONS
