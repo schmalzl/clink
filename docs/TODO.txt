@@ -11,3 +11,7 @@ Feel free to open up a new issue on GitHub if you have any questions.
 
 - actionbar: add some starter elements and connect them with a separate script.
 - actionbar: separate different kinds of actions / controls into different sections for ease of use.
+
+- dialog windows: Create a sepearate theme with a window border for easier readability
+- dialog windows: Make dialog windows appear always on top.
+- dialog windows: Make sure only one window is active a time
