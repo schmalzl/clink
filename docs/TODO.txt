@@ -8,11 +8,7 @@ Feel free to open up a new issue on GitHub if you have any questions.
 - system: make a simple and easy to scale base on how to add elements to the project
 
 - viewport: Disable maximizing viewport completly or track fullscreen to resize internal windows
+- viewport: In the menubar, make the display for the currently active project update every frame.
 
 - actionbar: add some starter elements and connect them with a separate script.
 - actionbar: separate different kinds of actions / controls into different sections for ease of use.
-
-- dialog windows: Make dialog windows appear always on top.
-- dialog windows: Make sure only one window is active a time
-
-- new project window: make the window start in the center of the screen
