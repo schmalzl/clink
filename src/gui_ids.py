@@ -3,3 +3,4 @@
 
 # Style IDS
 _console_win = None
+_dialog_win = None

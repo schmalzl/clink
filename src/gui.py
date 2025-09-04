@@ -105,7 +105,7 @@ def add_to_console():
 
 
 def new_project_ui():
-    with dpg.window(label="Actions"):
+    with dpg.window(label="Actions", modal=True):
         project_name = None
         project_location = None
         dpg.add_input_text(label="Project Name", user_data=project_name)
