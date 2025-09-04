@@ -128,7 +128,8 @@ def new_project_ui():
                     , modal=True
                     , width=400
                     , height=250
-                    , pos=(300, 275)):
+                    , pos=(300, 275)
+                    , tag="newproject"):
         global project_name
         global project_location
         dpg.add_text("To create a new project, specify its name and where the folder should be created.", wrap=400)
@@ -139,6 +140,6 @@ def new_project_ui():
         dpg.add_input_text(label="Project Name", callback=on_text_projectName)
         dpg.add_input_text(label="Directory", callback=on_text_projectFolder)
         dpg.add_spacer(height=5)
-        dpg.add_button(label="Go", callback=lambda: create_new_project(project_name, project_location))
+        dpg.add_button(label="Go", callback=lambda: (create_new_project(project_name, project_location), dpg.hide_item("newproject")))
 
     
