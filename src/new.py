@@ -44,6 +44,7 @@ def create_new_project(project_name, project_directory):
                 # set current project to that project
                 var.APP_CURRENT_PROJECT = project_name
                 var.APP_CURRENT_PROJECT_LOCATION = full_path
+                gui.CONSOLE_BUFFER.append("ok_Project opened...")
             else:
                 gui.CONSOLE_BUFFER.append("error_Folder creation failed.")
         else:
