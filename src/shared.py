@@ -3,3 +3,4 @@
 
 
 APP_CURRENT_PROJECT = "No open project."    # Current Project (displayed in viewport menu bar)
+APP_CURRENT_PROJECT_LOCATION = ""

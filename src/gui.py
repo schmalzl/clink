@@ -23,7 +23,6 @@ def load_gui():
             dpg.add_menu_item(label="Import new Feature")
             dpg.add_separator()
             dpg.add_menu_item(label="Save")
-            dpg.add_menu_item(label="Save As...")
             dpg.add_separator()
             dpg.add_menu_item(label="Preferences")
             dpg.add_menu_item(label="Exit", callback=cb.callback_exit_viewport)
@@ -104,9 +103,34 @@ def add_to_console():
             dpg.add_text(message, parent="console", color=(255, 255, 255, 180))
 
 
+
+project_name = ""
+project_location = ""
+
+def on_text_projectName(sender, app_data):
+    global project_name 
+    project_name = app_data
+
+def on_text_projectFolder(sender, app_data):
+    global project_location 
+    project_location = app_data
+
 def new_project_ui():
-    with dpg.window(label="Actions", modal=True):
-        project_name = None
-        project_location = None
-        dpg.add_input_text(label="Project Name", user_data=project_name)
+    with dpg.window(label="New Project"
+                    , modal=True
+                    , width=400
+                    , height=250
+                    , pos=(300, 275)):
+        global project_name
+        global project_location
+        dpg.add_text("To create a new project, specify its name and where the folder should be created.", wrap=400)
+        dpg.add_text(r"NOTE: Characters like: (/) (:) (*) (?) (<) (>) (|) (\) are not allowed in the project name.", wrap=400, color=(255, 255, 255, 180))
+        dpg.add_spacer(height=10)
+        dpg.add_separator()
+        dpg.add_spacer(height=10)
+        dpg.add_input_text(label="Project Name", callback=on_text_projectName)
+        dpg.add_input_text(label="Directory", callback=on_text_projectFolder)
+        dpg.add_spacer(height=5)
+        dpg.add_button(label="Go", callback=lambda: create_new_project(project_name, project_location))
+
     
