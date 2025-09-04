@@ -12,6 +12,10 @@ def create_new_project(project_name, project_directory):
     start = time.perf_counter()
     # Check if project Name is valid
     name_check = has_invalid_chars(project_name)
+    # check if name is empty
+    if project_name == "":
+        gui.CONSOLE_BUFFER.append("error_Project name cannot be empty.")
+        return None
     if name_check == True:
         gui.CONSOLE_BUFFER.append("error_Project name not allowed because it may contain forbidden characters.")
     else:
