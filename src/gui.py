@@ -10,6 +10,7 @@ import src.gui_ids as id            # shared module
 import src.shared as var            # shared global variables
 from src.new import create_new_project
 from src.open import open_project
+import webbrowser
 
 # Console log buffer
 CONSOLE_BUFFER = []
@@ -40,11 +41,12 @@ def load_gui():
         with dpg.menu(label="Terminal"):
             dpg.add_menu_item(label="Clear Terminal", callback=cb.callback_clearConsole)
         with dpg.menu(label="Help"):
-            dpg.add_menu_item(label="Support & Help")
+            dpg.add_menu_item(label="Support & Help", callback=lambda: webbrowser.open("https://github.com/schmalzl/clink/issues"))
             dpg.add_separator()
-            dpg.add_menu_item(label="See current version")
-            dpg.add_menu_item(label="View License")
-            dpg.add_menu_item(label="About")
+            dpg.add_menu_item(label="See current version", callback=lambda: version_dialog())
+            dpg.add_menu_item(label="View License", callback=lambda: webbrowser.open("https://github.com/schmalzl/clink/blob/master/LICENSE.txt"))
+            dpg.add_menu_item(label="View GitHub Repository", callback=lambda: webbrowser.open("https://github.com/schmalzl/clink"))
+            dpg.add_menu_item(label="About", callback=lambda: about_dialog())
         dpg.add_separator()
         global id_projectName
         id_projectName = dpg.add_text(var.APP_CURRENT_PROJECT, color=(255, 255, 255, 180))
@@ -306,3 +308,24 @@ def open_projectUI():
         dpg.add_input_text(label="Project Directory", callback=on_text_projectDir)
         dpg.add_spacer(height=4)
         dpg.add_button(label="   Open   ", callback=lambda: (open_project(projectDir), dpg.hide_item("openproject")))
+
+
+# ---------------------------------------------- ABOUT WINDOW & VERSION WINDOW
+def version_dialog():
+    with dpg.window(label="Version"
+                    , modal=True
+                    , width=400
+                    , height=250
+                    , pos=(300,275)
+                    , tag="openproject"):
+        dpg.add_text("clink v0.1.dev WIP", wrap=400)
+
+def about_dialog():
+    with dpg.window(label="About"
+                    , modal=True
+                    , width=400
+                    , height=250
+                    , pos=(300,275)
+                    , tag="openproject"):
+        dpg.add_text("clink. developed and published by Kian Schmalzl under the MIT License.", wrap=390)
+        dpg.add_text("More Info: https://github.com/schmalzl/clink")
