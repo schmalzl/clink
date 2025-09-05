@@ -37,7 +37,7 @@ def load_gui():
             dpg.add_menu_item(label="Build Debug")
             dpg.add_menu_item(label="Build Release")
         with dpg.menu(label="Terminal"):
-            dpg.add_menu_item(label="Clear Termianl", callback=cb.callback_clearConsole)
+            dpg.add_menu_item(label="Clear Terminal", callback=cb.callback_clearConsole)
         with dpg.menu(label="Help"):
             dpg.add_menu_item(label="Support & Help")
             dpg.add_separator()
@@ -56,11 +56,153 @@ def load_gui():
                     , no_resize=True
                     , no_move=True
                     , no_collapse=True):
-        dpg.add_text("-- OUTPUT --")
-        dpg.add_text("Print Text to console")
-        dpg.add_same_line()
-        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_print")
-        dpg.add_text("-- INPUT --")
+        dpg.add_text("Hover over the ADD button to see more information about a feature.", wrap=195, color=(255, 255, 255, 170))
+        dpg.add_spacer(height=10)
+
+        dpg.add_text("ENTRY")
+        dpg.add_separator()
+
+        dpg.add_text("- Program Entry Point")
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_entry", width=200)
+
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("SECURITY")
+        dpg.add_separator()
+
+        dpg.add_text("- Password Barrier")
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_password", width=200)
+        # --------------------------------------
+        dpg.add_text("- Password Barrier (closes on incorrect input)", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_password_failsafe", width=200)
+        # --------------------------------------
+        dpg.add_text("- File-Hash Verification", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_file_verification", width=200)
+        # --------------------------------------
+        dpg.add_text("- Dynamic license verification per user", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_license_verification", width=200)
+        # --------------------------------------
+        dpg.add_text("- Security Question", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_sec_question", width=200)
+        # --------------------------------------
+        dpg.add_text("- Hardware Dongle Access", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_hardware_access", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("AGREEMENTS")
+        dpg.add_separator()
+
+        dpg.add_text("- License Agreement from file", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_agreement_file", width=200)
+        # --------------------------------------
+        dpg.add_text("- Custom License Agreement", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_agreement", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("OUTPUT")
+        dpg.add_separator()
+
+        dpg.add_text("- Print Text to console", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_print_msg", width=200)
+        # --------------------------------------
+        dpg.add_text("- Print Warning message", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_print_warning", width=200)
+        # --------------------------------------
+        dpg.add_text("- Print Error Message", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_print_error", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("INPUT")
+        dpg.add_separator()
+
+        dpg.add_text("- Input Text", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_explicit", width=200)
+        # --------------------------------------
+        dpg.add_text("- Input Number", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_explicit", width=200)
+        # --------------------------------------
+        dpg.add_text("- Input Yes/No", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_explicit", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("CONDITIONS")
+        dpg.add_separator()
+        dpg.add_text("- Continue if condition is fulfilled", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_explicit", width=200)
+        # --------------------------------------
+        dpg.add_text("- Continue if condition is not fullfilled", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_explicit", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("FILESYSTEM")
+        dpg.add_separator()
+        dpg.add_text("- Create file", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_create_file", width=200)
+        # --------------------------------------
+        dpg.add_text("- Write to file", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_write_file", width=200)
+        # --------------------------------------
+        dpg.add_text("- Read a file", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_read_file", width=200)
+        # --------------------------------------
+        dpg.add_text("- Delete a file", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_delete_file", width=200)
+        # --------------------------------------
+        dpg.add_text("- Create a folder", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_create_folder", width=200)
+        # --------------------------------------
+        dpg.add_text("- Delete a folder", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_delte_folder", width=200)
+        # --------------------------------------
+        dpg.add_text("- Rename a folder", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_rename_folder", width=200)
+        # --------------------------------------
+        dpg.add_text("- Rename a file", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_rename_file", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("FAILSAFES")
+        dpg.add_separator()
+
+        dpg.add_text("- YES/NO failsafe", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_yn", width=200)
+        # --------------------------------------
+        dpg.add_text("- Continue/Cancel failsafe", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_cc", width=200)
+        # --------------------------------------
+        dpg.add_text("- Explicit failsafe", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_failsafe_explicit", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("EXIT")
+        dpg.add_separator()
+
+        dpg.add_text("- Exit Program", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_exit", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("TERMINAL")
+        dpg.add_separator()
+        dpg.add_text("- Execute a terminal command", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_execute_terminal", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
+        dpg.add_text("MATH OPERATIONS")
+        dpg.add_separator()
+        dpg.add_text("- Generate a random number", wrap=195)
+        dpg.add_button(label="Add", callback=add_to_actionlist, user_data="_random_number", width=200)
+        # --------------------------------------
+        dpg.add_spacer(height=10)
+        # ------------------------------------------------------------------------------------
     
     # console window
     with dpg.window(label="Console Log"
