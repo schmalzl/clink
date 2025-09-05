@@ -11,3 +11,6 @@ def callback_exit_viewport():
 
 def callback_clearConsole():
     gui.CONSOLE_BUFFER = []
+
+def callbackOpenProject(projectDirectory):
+    pass

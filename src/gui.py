@@ -9,6 +9,7 @@ import src.menu_callbacks as cb     # menu callbacks for viewport menu bar
 import src.gui_ids as id            # shared module
 import src.shared as var            # shared global variables
 from src.new import create_new_project
+from src.open import open_project
 
 # Console log buffer
 CONSOLE_BUFFER = []
@@ -21,7 +22,7 @@ def load_gui():
     with dpg.viewport_menu_bar():
         with dpg.menu(label="File"):
             dpg.add_menu_item(label="New Project", callback=new_project_ui)
-            dpg.add_menu_item(label="Open Project File")
+            dpg.add_menu_item(label="Open Project File", callback=lambda: open_projectUI())
             dpg.add_separator()
             dpg.add_menu_item(label="Import new Feature")
             dpg.add_separator()
@@ -284,4 +285,24 @@ def new_project_ui():
         dpg.add_spacer(height=5)
         dpg.add_button(label="Go", callback=lambda: (create_new_project(project_name, project_location), dpg.hide_item("newproject")))
 
-    
+
+
+# --------------------------------------------- OPEN PROJECT DIALOG
+projectDir = ""
+
+def on_text_projectDir(sender, app_data):
+    global projectDir
+    projectDir = app_data
+
+def open_projectUI():
+    with dpg.window(label="Open Project"
+                    , modal=True
+                    , width=400
+                    , height=250
+                    , pos=(300,275)
+                    , tag="openproject"):
+        dpg.add_text("Specify the directory of the project that should be opened.", wrap=400)
+        dpg.add_spacer(height=10)
+        dpg.add_input_text(label="Project Directory", callback=on_text_projectDir)
+        dpg.add_spacer(height=4)
+        dpg.add_button(label="   Open   ", callback=lambda: (open_project(projectDir), dpg.hide_item("openproject")))
